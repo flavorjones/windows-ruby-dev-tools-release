@@ -1,8 +1,10 @@
+# -*-yaml-*-
 ---
 name: windows-ruby-dev-tools
 
 templates: {}
 
-packages: []
+packages:
+- unzip
 
 properties: {}
