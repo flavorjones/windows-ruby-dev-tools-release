@@ -17,7 +17,7 @@ across multiple operating systems.
 
 ## Tools Not Yet Installed (But I Plan To Do Soon)
 
-- Ruby (various versions via [One-Click Installer](https://rubyinstaller.org/)
+- Ruby (various versions via [One-Click Installer](https://rubyinstaller.org/))
 - [DevKit](http://rubyinstaller.org/add-ons/devkit/) installed for each Ruby
 - Git
 - CMake
