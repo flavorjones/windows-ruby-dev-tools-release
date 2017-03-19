@@ -1,0 +1,28 @@
+name: windows-ruby-dev-tools
+version: "1"
+commit_hash: d658587
+uncommitted_changes: false
+jobs:
+- name: windows-ruby-dev-tools
+  version: 719f8487e889eef119eb2b1ac4345375593e36ac
+  fingerprint: 719f8487e889eef119eb2b1ac4345375593e36ac
+  sha1: 872bbfb392bb2b85fa6dcde7d9e5fd262165f916
+packages:
+- name: patch
+  version: 57b75e00c244708a58d9bae9cae5d8a562d2c24f
+  fingerprint: 57b75e00c244708a58d9bae9cae5d8a562d2c24f
+  sha1: 11ce0004e4ba2f0c05db5a74c4171384c8d0c7e3
+  dependencies:
+  - windows-ruby-dev-tools
+  - unzip
+- name: unzip
+  version: 02e6ae7b0044b3daaec49ae183e72feeac50d19a
+  fingerprint: 02e6ae7b0044b3daaec49ae183e72feeac50d19a
+  sha1: bf940a07a8f86ffbade131e983e1a490dbafd438
+  dependencies:
+  - windows-ruby-dev-tools
+- name: windows-ruby-dev-tools
+  version: 3f70f68a8242de000bda4bc45bad2ba9a245bad3
+  fingerprint: 3f70f68a8242de000bda4bc45bad2ba9a245bad3
+  sha1: 87a16e4531bc5509cb40a3ba7dadacdcdb4c174c
+  dependencies: []
