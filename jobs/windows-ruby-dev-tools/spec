@@ -6,5 +6,6 @@ templates: {}
 
 packages:
 - unzip
+- patch
 
 properties: {}

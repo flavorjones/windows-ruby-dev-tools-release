@@ -1,0 +1,7 @@
+# -*-powershell-*-
+
+Set-PSDebug -trace 1            # "set -x"
+Set-PSDebug -strict             # "set -u"
+$ErrorActionPreference = "Stop" # "set -e"
+
+c:\var\vcap\packages\unzip\bin\unzip.exe "patch-2.5.9-7/patch-2.5.9-7-bin.zip" -d "$($env:BOSH_INSTALL_TARGET)"

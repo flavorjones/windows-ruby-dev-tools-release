@@ -1,0 +1,8 @@
+---
+name: patch
+
+dependencies:
+- unzip
+
+files:
+- patch-2.5.9-7/patch-2.5.9-7-bin.zip # https://downloads.sourceforge.net/project/gnuwin32/patch/2.5.9-7/patch-2.5.9-7-bin.zip md5sum=b9c8b31d62f4b2e4f1887bbb63e8a905
