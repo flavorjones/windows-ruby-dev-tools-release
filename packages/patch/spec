@@ -1,7 +1,9 @@
+# -*-yaml-*-
 ---
 name: patch
 
 dependencies:
+- windows-ruby-dev-tools
 - unzip
 
 files:

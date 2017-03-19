@@ -62,11 +62,9 @@
 #        own source and binary releases.
 #
 
-Set-PSDebug -trace 1            # "set -x"
-Set-PSDebug -strict             # "set -u"
-$ErrorActionPreference = "Stop" # "set -e"
+. "c:\var\vcap\packages\windows-ruby-dev-tools\prelude.ps1"
 
-$unzip_bin_path = "$($env:BOSH_INSTALL_TARGET)/bin"
+$unzip_bin_path = "$($env:BOSH_INSTALL_TARGET)\bin"
 
-new-item -itemtype directory -force -path $unzip_bin_path
-copy-item "unzip-5.51-1/unzip.exe" $unzip_bin_path
+new-item -itemtype directory -force -path "$($unzip_bin_path)"
+copy-item "unzip-5.51-1/unzip.exe" "$($unzip_bin_path)"

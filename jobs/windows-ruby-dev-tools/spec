@@ -5,6 +5,7 @@ name: windows-ruby-dev-tools
 templates: {}
 
 packages:
+- windows-ruby-dev-tools
 - unzip
 - patch
 

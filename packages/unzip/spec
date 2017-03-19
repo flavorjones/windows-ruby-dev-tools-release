@@ -64,7 +64,8 @@
 ---
 name: unzip
 
-dependencies: []
+dependencies:
+  - windows-ruby-dev-tools
 
 files:
-- unzip-5.51-1/unzip.exe # extracted from https://downloads.sourceforge.net/project/gnuwin32/unzip/5.51-1/unzip-5.51-1-bin.zip md5sum=925a5d4d9b4a63ff1a473cc4d47f2f05
+  - unzip-5.51-1/unzip.exe # extracted from https://downloads.sourceforge.net/project/gnuwin32/unzip/5.51-1/unzip-5.51-1-bin.zip md5sum=925a5d4d9b4a63ff1a473cc4d47f2f05

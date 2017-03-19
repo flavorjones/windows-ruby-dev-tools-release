@@ -1,0 +1,8 @@
+# -*-yaml-*-
+---
+name: windows-ruby-dev-tools
+
+dependencies: []
+
+files:
+  - prelude.ps1
