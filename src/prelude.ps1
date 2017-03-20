@@ -26,3 +26,4 @@ function conditional-package-prepend-path {
 
 conditional-package-prepend-path "unzip"
 conditional-package-prepend-path "patch"
+conditional-package-prepend-path "git"

@@ -8,5 +8,6 @@ packages:
 - windows-ruby-dev-tools
 - unzip
 - patch
+- git
 
 properties: {}
