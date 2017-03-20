@@ -12,6 +12,7 @@ across multiple operating systems.
 
 - [unzip](http://gnuwin32.sourceforge.net/packages/unzip.htm)
 - [patch](http://gnuwin32.sourceforge.net/packages/patch.htm)
+- [Git](https://github.com/git-for-windows/git/releases)
 - a `prelude.ps1` file for all your powershell needs
 
 
@@ -19,5 +20,4 @@ across multiple operating systems.
 
 - Ruby (various versions via [One-Click Installer](https://rubyinstaller.org/))
 - [DevKit](http://rubyinstaller.org/add-ons/devkit/) installed for each Ruby
-- Git
 - CMake
