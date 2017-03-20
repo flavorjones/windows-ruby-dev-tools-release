@@ -1,0 +1,38 @@
+name: windows-ruby-dev-tools
+version: "2"
+commit_hash: "6080939"
+uncommitted_changes: false
+jobs:
+- name: windows-ruby-dev-tools
+  version: 6ed5b2bd7ecb9de8c7afa50db7848b67d486386d
+  fingerprint: 6ed5b2bd7ecb9de8c7afa50db7848b67d486386d
+  sha1: 02704cb382c01fcb1388e606c90199e5e1b15f04
+packages:
+- name: git
+  version: dae2ab74edc132ba924998cea8021648e9f12cc4
+  fingerprint: dae2ab74edc132ba924998cea8021648e9f12cc4
+  sha1: 85e6c59f82420c5f6f58c5f80c62ae8c8b811218
+  dependencies:
+  - windows-ruby-dev-tools
+- name: patch
+  version: 57b75e00c244708a58d9bae9cae5d8a562d2c24f
+  fingerprint: 57b75e00c244708a58d9bae9cae5d8a562d2c24f
+  sha1: 11ce0004e4ba2f0c05db5a74c4171384c8d0c7e3
+  dependencies:
+  - windows-ruby-dev-tools
+  - unzip
+- name: unzip
+  version: 02e6ae7b0044b3daaec49ae183e72feeac50d19a
+  fingerprint: 02e6ae7b0044b3daaec49ae183e72feeac50d19a
+  sha1: bf940a07a8f86ffbade131e983e1a490dbafd438
+  dependencies:
+  - windows-ruby-dev-tools
+- name: windows-ruby-dev-tools
+  version: c1bb8b9fc13b9de8f95b2d8200f5766453cda2fd
+  fingerprint: c1bb8b9fc13b9de8f95b2d8200f5766453cda2fd
+  sha1: c9cc2888090a0e07e9c6e25784e301affe500dea
+  dependencies: []
+license:
+  version: 4e1d06b42e350858f94359cc7b096a91330b2731
+  fingerprint: 4e1d06b42e350858f94359cc7b096a91330b2731
+  sha1: 5d3dd0bde632a1c002fa9a2e70deffc071e7ac50
