@@ -17,13 +17,14 @@ $size.width = 128
 $term.windowsize = $size
 
 function conditional-package-prepend-path {
-    param ($pkg)
-    $dir = "c:\var\vcap\packages\$($pkg)\bin"
+    param ($dir)
+    $dir = "c:\var\vcap\packages\$($dir)"
     if (test-path $dir) {
         $env:PATH = $dir + ";" + $env:PATH
     }
 }
 
-conditional-package-prepend-path "unzip"
-conditional-package-prepend-path "patch"
-conditional-package-prepend-path "git"
+conditional-package-prepend-path "unzip\bin"
+conditional-package-prepend-path "patch\bin"
+conditional-package-prepend-path "git\bin"
+conditional-package-prepend-path "gpg"

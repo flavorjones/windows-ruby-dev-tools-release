@@ -1,0 +1,14 @@
+# -*-powershell-*-
+
+. "c:\var\vcap\packages\windows-ruby-dev-tools\prelude.ps1"
+
+push-location "gnupg-1.4.21"
+
+  unzip.exe "gnupg-w32cli-1.4.21.zip"
+  copy-item "gnupg-w32cli-1.4.21\*" -destination "$($env:BOSH_INSTALL_TARGET)" -recurse
+
+pop-location
+
+if (-not (test-path "$($env:BOSH_INSTALL_TARGET)\gpg.exe")) {
+    throw "gpg didn't install properly"
+}
