@@ -4,6 +4,7 @@ git-2.12.0/PortableGit-2.12.0-64-bit.7z.exe:
   sha: 95de9eacdbb4a3fbf3671746182e71ada0af94b1
 gnupg-1.4.21/gnupg-w32cli-1.4.21.zip:
   size: 2899856
+  object_id: 6a7af069-24e2-4d43-6074-6c154c6c6af0
   sha: 288e1216d942cdd64b70786ba0c820fccae30039
 patch-2.5.9-7/patch-2.5.9-7-bin.zip:
   size: 126248
