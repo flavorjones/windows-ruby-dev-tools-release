@@ -1,6 +1,8 @@
 builds:
   374c2dfe-9edc-41b5-5617-1e3dbaafc272:
     version: "1"
+  639289f0-9af4-4f56-4943-7d1973c3c30a:
+    version: "3"
   c66572d9-c7f3-40ab-4291-034011e1c783:
     version: "2"
 format-version: "2"
