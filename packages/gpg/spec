@@ -1,0 +1,27 @@
+# -*-yaml-*-
+---
+name: gpg
+
+dependencies:
+  - windows-ruby-dev-tools
+  - unzip
+
+files:
+  #
+  # I couldn't find a plain zip archive of gpg for windows, so I
+  # installed gnupg-w32cli locally via `wine` and then zipped the
+  # contents of the installed directory. :`-(
+  #
+  # so this is a zip file made from the installed contents of:
+  #
+  # https://www.gnupg.org/ftp/gcrypt/binary/gnupg-w32cli-1.4.21.exe sha256=743ab6f4c47f170e7c9b61fd287f2c796cb3882b47e8564434f94789bf442b71
+  #
+  # this installer's integrity was validated with a gpg signature:
+  #
+  # gpg: Signature made Wed 17 Aug 2016 09:30:28 AM EDT using RSA key ID 4F25E3B6
+  # gpg: Good signature from "Werner Koch (dist sig)"
+  # gpg: WARNING: This key is not certified with a trusted signature!
+  # gpg:          There is no indication that the signature belongs to the owner.
+  # Primary key fingerprint: D869 2123 C406 5DEA 5E0F  3AB5 249B 39D2 4F25 E3B6
+  #
+  - gnupg-1.4.21/gnupg-w32cli-1.4.21.zip # sha256sum=000e13151ba16c42f7256bc745dab921f2d2e166acf809d7ecb480d4360ca4b9
