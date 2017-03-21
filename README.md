@@ -4,8 +4,9 @@ This is a [BOSH](https://github.com/cloudfoundry/bosh) release to
 install some tools on a windows stemcell for Ruby development.
 
 It was driven out by the desire to
-use [Concourse](https://concourse.ci/) to CI the Nokogiri toolchain
-across multiple operating systems.
+use [Concourse](https://concourse.ci/) to CI
+the [Nokogiri toolchain](http://status.nokogiri.org) across multiple
+operating systems.
 
 
 ## Tools Installed
