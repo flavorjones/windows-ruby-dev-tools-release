@@ -14,6 +14,7 @@ operating systems.
 - [unzip](http://gnuwin32.sourceforge.net/packages/unzip.htm)
 - [patch](http://gnuwin32.sourceforge.net/packages/patch.htm)
 - [Git](https://github.com/git-for-windows/git/releases)
+- [gpg](https://www.gnupg.org)
 - a `prelude.ps1` file for all your powershell needs
 
 
