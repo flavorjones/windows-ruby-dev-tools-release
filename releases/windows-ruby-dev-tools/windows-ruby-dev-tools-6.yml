@@ -1,0 +1,51 @@
+name: windows-ruby-dev-tools
+version: "6"
+commit_hash: 370e0da
+uncommitted_changes: false
+jobs:
+- name: windows-ruby-dev-tools
+  version: 4b7111adee3b46e1e625cabba6c870fe75650d36
+  fingerprint: 4b7111adee3b46e1e625cabba6c870fe75650d36
+  sha1: 0282e1f15eb00feedafe2ffc4863638170eb3837
+packages:
+- name: git
+  version: dae2ab74edc132ba924998cea8021648e9f12cc4
+  fingerprint: dae2ab74edc132ba924998cea8021648e9f12cc4
+  sha1: e8ae5a6edd3f0f8afbe092b4005293a4fb1f0aa9
+  dependencies:
+  - windows-ruby-dev-tools
+- name: gpg
+  version: 4a3b716da18c3f02c0a24a1656f2de064d8276f2
+  fingerprint: 4a3b716da18c3f02c0a24a1656f2de064d8276f2
+  sha1: fe87455ab87c78a9e8a4f22fcdab4312c722d320
+  dependencies:
+  - windows-ruby-dev-tools
+  - unzip
+- name: patch
+  version: 57b75e00c244708a58d9bae9cae5d8a562d2c24f
+  fingerprint: 57b75e00c244708a58d9bae9cae5d8a562d2c24f
+  sha1: 279715212de5384141bf175dd04228b008b1a115
+  dependencies:
+  - windows-ruby-dev-tools
+  - unzip
+- name: ruby-2.3
+  version: 931412fa7d7f7b2ca4072768b95096e3b7a777de
+  fingerprint: 931412fa7d7f7b2ca4072768b95096e3b7a777de
+  sha1: cc266da85704fe3ae9bed72c959c0b3f2d408147
+  dependencies:
+  - windows-ruby-dev-tools
+- name: unzip
+  version: 02e6ae7b0044b3daaec49ae183e72feeac50d19a
+  fingerprint: 02e6ae7b0044b3daaec49ae183e72feeac50d19a
+  sha1: 649740e46f03d483356b268115360d29c3c412a1
+  dependencies:
+  - windows-ruby-dev-tools
+- name: windows-ruby-dev-tools
+  version: ced13d11f9876e28350e8e77354d1dd002bbac49
+  fingerprint: ced13d11f9876e28350e8e77354d1dd002bbac49
+  sha1: ba7cd54264e9c8ab392f3cf32aca5e963553df5f
+  dependencies: []
+license:
+  version: 60d79131a15c93d26ddae2176a96792af809ca6f
+  fingerprint: 60d79131a15c93d26ddae2176a96792af809ca6f
+  sha1: 330efecf6952632f7d4d78740e4aa06a069fc62c
