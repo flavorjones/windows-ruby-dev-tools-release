@@ -10,5 +10,6 @@ packages:
 - patch
 - git
 - gpg
+- ruby-2.3
 
 properties: {}

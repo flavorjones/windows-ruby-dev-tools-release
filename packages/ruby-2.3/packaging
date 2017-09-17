@@ -1,0 +1,55 @@
+# -*-powershell-*-
+
+. "c:\var\vcap\packages\windows-ruby-dev-tools\prelude.ps1"
+
+#
+#  extract ruby
+#
+push-location "ruby-2.3"
+
+    system-cmd "rubyinstaller-2.3.3-x64.exe /verysilent /dir=$($env:BOSH_INSTALL_TARGET)"
+
+pop-location
+
+if (-not (test-path "$($env:BOSH_INSTALL_TARGET)\bin\ruby.exe")) {
+    throw "git didn't install properly"
+}
+
+system-cmd "$($env:BOSH_INSTALL_TARGET)\bin\ruby.exe --version"
+
+
+#
+#  extract devkit
+#
+$dk_blob_dir = "$(get-location)\devkit"
+$dk_inst_dir = "$($env:BOSH_INSTALL_TARGET)\dk"
+$dk_exe = "DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe"
+
+new-item -itemtype directory -force -path $dk_inst_dir
+
+copy-item "$($dk_blob_dir)\$($dk_exe)" $dk_inst_dir
+
+push-location $dk_inst_dir
+
+  system-cmd "$($dk_exe) -y"
+  remove-item $dk_exe
+
+pop-location
+
+if (-not (test-path "$($dk_inst_dir)\bin\echo.exe")) {
+    throw "devkit didn't install properly"
+}
+
+
+#
+#  install devkit
+#
+push-location $dk_inst_dir
+
+  "---`n- $($env:BOSH_INSTALL_TARGET)" | out-file "config.yml" -encoding ASCII
+  get-content "config.yml"
+  system-cmd "$($env:BOSH_INSTALL_TARGET)\bin\ruby.exe dk.rb install --force"
+
+pop-location
+
+system-cmd "$($env:BOSH_INSTALL_TARGET)\bin\ruby.exe -rdevkit -e 'puts 1234'"

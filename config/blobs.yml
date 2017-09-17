@@ -1,3 +1,6 @@
+devkit/DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe:
+  size: 44275037
+  sha: cd467f4d02d60c6cf78069c59d7ff114d93426f9
 git-2.12.0/PortableGit-2.12.0-64-bit.7z.exe:
   size: 32538592
   object_id: 7760fa4f-2dc0-43c3-5a2f-f652420c8a83
@@ -10,6 +13,9 @@ patch-2.5.9-7/patch-2.5.9-7-bin.zip:
   size: 126248
   object_id: ce5c5c6c-1f92-4219-63c9-a32723ce76f5
   sha: 7b2ec738881f4e962e54e0f330b67c42635266b7
+ruby-2.3/rubyinstaller-2.3.3-x64.exe:
+  size: 19668866
+  sha: 83ae5e6282a2b7e21bb61c5b4d1b184c33edbd2a
 unzip-5.51-1/unzip.exe:
   size: 164864
   object_id: 38d4557f-1c64-4e99-69f8-163d3229c8b2
