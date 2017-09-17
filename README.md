@@ -23,3 +23,14 @@ operating systems.
 - Ruby (various versions via [One-Click Installer](https://rubyinstaller.org/))
 - [DevKit](http://rubyinstaller.org/add-ons/devkit/) installed for each Ruby
 - CMake
+
+
+## TODO
+
+- [ ] ruby 2.4 with devkit (blocked on msys2 headless installation)
+- [ ] ruby 2.3 with devkit 
+- [ ] ruby 2.2 with devkit
+- [ ] ruby 2.1 with devkit
+- [ ] document how to choose a ruby
+- [ ] document how to opt into devkit
+- [ ] update concourse-gem with windows-awareness
