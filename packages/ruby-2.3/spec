@@ -1,0 +1,10 @@
+# -*-yaml-*-
+---
+name: ruby-2.3
+
+dependencies:
+  - windows-ruby-dev-tools
+
+files:
+  - ruby-2.3/rubyinstaller-2.3.3-x64.exe # https://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.3.3-x64.exe md=b2688631f3eac70dc45a1735ba8ef748
+  - devkit/DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe # https://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe sha1=cd467f4d02d60c6cf78069c59d7ff114d93426f9

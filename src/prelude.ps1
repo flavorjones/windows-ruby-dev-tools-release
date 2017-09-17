@@ -24,7 +24,17 @@ function conditional-package-prepend-path {
     }
 }
 
+function system-cmd {
+    param ($command)
+    cmd /c $command
+    if (-not ($?)) {
+        throw "$($command) failed"
+    }
+}
+
 conditional-package-prepend-path "unzip\bin"
 conditional-package-prepend-path "patch\bin"
 conditional-package-prepend-path "git\bin"
 conditional-package-prepend-path "gpg"
+
+conditional-package-prepend-path "ruby-2.3\bin"
