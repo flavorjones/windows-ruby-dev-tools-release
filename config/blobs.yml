@@ -12,6 +12,7 @@ gnupg-1.4.21/gnupg-w32cli-1.4.21.zip:
   sha: 288e1216d942cdd64b70786ba0c820fccae30039
 msys2/msys2-base-x86_64-20161025.zip:
   size: 95497849
+  object_id: 47b94829-fd47-4a96-6929-b985b5383cd2
   sha: c97dfe50327bb82ac52cc97df8d5ec52ab3fbb46
 patch-2.5.9-7/patch-2.5.9-7-bin.zip:
   size: 126248
@@ -23,6 +24,7 @@ ruby-2.3/rubyinstaller-2.3.3-x64.exe:
   sha: 83ae5e6282a2b7e21bb61c5b4d1b184c33edbd2a
 ruby-2.4/rubyinstaller-2.4.2-2-x64.exe:
   size: 8982267
+  object_id: 0e833881-1c65-46e6-6b5c-60cf95cd8693
   sha: c961c2752a183487bc42ed24beb7e931230fa7d5
 unzip-5.51-1/unzip.exe:
   size: 164864
