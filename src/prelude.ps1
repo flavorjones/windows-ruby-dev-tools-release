@@ -37,4 +37,13 @@ conditional-package-prepend-path "patch\bin"
 conditional-package-prepend-path "git\bin"
 conditional-package-prepend-path "gpg"
 
-conditional-package-prepend-path "ruby-2.3\bin"
+if ($env:WIN_RUBY_VERSION -eq "2.3") {
+    write-host "Selected Ruby 2.3"
+    conditional-package-prepend-path "ruby-2.3\bin"
+} elseif ($env:WIN_RUBY_VERSION -eq "2.4") {
+    write-host "Selected Ruby 2.4"
+    conditional-package-prepend-path "ruby-2.4\bin"
+} else {
+    write-host "Defaulting to Ruby 2.4, set WIN_RUBY_VERSION env var to override"
+    conditional-package-prepend-path "ruby-2.4\bin"
+}

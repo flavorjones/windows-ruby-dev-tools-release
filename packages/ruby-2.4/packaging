@@ -1,0 +1,53 @@
+# -*-powershell-*-
+
+. "c:\var\vcap\packages\windows-ruby-dev-tools\prelude.ps1"
+
+#
+#  extract ruby
+#
+push-location "ruby-2.4"
+
+    system-cmd "rubyinstaller-2.4.2-2-x64.exe /verysilent /dir=$($env:BOSH_INSTALL_TARGET)"
+
+pop-location
+
+if (-not (test-path "$($env:BOSH_INSTALL_TARGET)\bin\ruby.exe")) {
+    throw "git didn't install properly"
+}
+
+system-cmd "$($env:BOSH_INSTALL_TARGET)\bin\ruby.exe --version"
+
+
+#
+#  install msys2
+#
+$msys_install_dir = "$($env:BOSH_INSTALL_TARGET)\msys64"
+
+new-item -itemtype directory -force -path $msys_install_dir
+
+push-location "msys2"
+
+    unzip.exe "msys2-base-x86_64-20161025.zip"
+    copy-item "msys64\*" -destination $msys_install_dir -recurse
+
+pop-location
+
+if (-not (test-path "$($env:BOSH_INSTALL_TARGET)\msys64\usr\bin\msys-2.0.dll")) {
+    throw "msys2 didn't install properly"
+}
+
+
+#
+#  update msys2
+#
+conditional-package-prepend-path "ruby-2.4\bin"
+
+push-location "ruby-2.4"
+
+    system-cmd "ridk exec bash.exe pacman-key --init"
+    system-cmd "ridk exec bash.exe pacman-key --populate msys2"
+    system-cmd "ridk install 2 3"
+
+pop-location
+
+system-cmd "$($env:BOSH_INSTALL_TARGET)\bin\ruby.exe -rdevkit -e 'puts 1234'"

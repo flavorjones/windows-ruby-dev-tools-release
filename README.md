@@ -11,6 +11,7 @@ operating systems.
 
 ## Tools Installed
 
+- [Ruby 2.4 with optional DevKit](https://rubyinstaller.org/)
 - [Ruby 2.3 with optional DevKit](https://rubyinstaller.org/)
 - [unzip](http://gnuwin32.sourceforge.net/packages/unzip.htm)
 - [patch](http://gnuwin32.sourceforge.net/packages/patch.htm)
@@ -44,13 +45,19 @@ You use it by putting this line at the top of your powershell scripts:
 
 ### Ruby
 
-By default, Ruby 2.3 will be in your search path as `ruby` or `ruby.exe`, as will utilities like `gem`.
+By default, Ruby 2.4 will be in your search path as `ruby` or `ruby.exe`, as will utilities like `gem`.
 
-You can opt into using DevKit by setting this line in your powershell script:
+You can choose a different version of Ruby by setting `$env:WIN_RUBY_VERSION` to one of:
+
+* `2.4` (default)
+* `2.3`
+
+You can opt into using DevKit by adding this line to your powershell script:
 
 ``` powershell
 $env:RUBYOPT = "-rdevkit"
 ```
+
 
 
 ### Other executables
@@ -60,10 +67,10 @@ All the other executables are in your search path, so just go ahead and use `unz
 
 ## TODO
 
-- [ ] ruby 2.4 with devkit (blocked on msys2 headless installation)
+- [x] ruby 2.4 with devkit (blocked on msys2 headless installation)
 - [x] ruby 2.3 with devkit 
+- [x] document how to choose a ruby
+- [x] document how to opt into devkit
 - [ ] ruby 2.2 with devkit
 - [ ] ruby 2.1 with devkit
-- [ ] document how to choose a ruby
-- [x] document how to opt into devkit
 - [ ] update concourse-gem with windows-awareness

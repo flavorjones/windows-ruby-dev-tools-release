@@ -1,0 +1,21 @@
+# -*-yaml-*-
+---
+name: ruby-2.4
+
+dependencies:
+  - windows-ruby-dev-tools
+  - unzip
+
+files:
+  #
+  #  msys2 only makes itself available an xz file, which is pretty
+  #  lame if you think about it for two seconds.
+  #
+  #  here I've downloaded:
+  #
+  #  http://repo.msys2.org/distrib/x86_64/msys2-base-x86_64-20161025.tar.xz sha256sum=bb1f1a0b35b3d96bf9c15092da8ce969a84a134f7b08811292fbc9d84d48c65d
+  #
+  #  and then zipped it up for use in this bosh release.
+  #
+  - msys2/msys2-base-x86_64-20161025.zip
+  - ruby-2.4/rubyinstaller-2.4.2-2-x64.exe # https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.2-2/rubyinstaller-2.4.2-2-x64.exe no sha to verify, here's what I downloaded: sha256sum=36a4cd41aeac7c5ebf42b42717641430bca201e9376e13ce7c219f3a768590e5
