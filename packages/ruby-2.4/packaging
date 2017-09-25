@@ -21,6 +21,11 @@ system-cmd "$($env:BOSH_INSTALL_TARGET)\bin\ruby.exe --version"
 #
 #  install msys2
 #
+#  for details on why this works, see:
+#
+#  * https://github.com/oneclick/rubyinstaller2/issues/79#issuecomment-330079769
+#  * https://github.com/oneclick/rubyinstaller2/blob/master/lib/ruby_installer/build/msys2_installation.rb#L32-L65
+#
 $msys_install_dir = "$($env:BOSH_INSTALL_TARGET)\msys64"
 
 new-item -itemtype directory -force -path $msys_install_dir
