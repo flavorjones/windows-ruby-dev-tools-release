@@ -20,8 +20,13 @@ function conditional-package-prepend-path {
     param ($dir)
     $dir = "c:\var\vcap\packages\$($dir)"
     if (test-path $dir) {
-        $env:PATH = $dir + ";" + $env:PATH
+        prepend-path $dir
     }
+}
+
+function prepend-path {
+    param ($dir)
+    $env:PATH = $dir + ";" + $env:PATH
 }
 
 function system-cmd {
