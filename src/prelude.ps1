@@ -31,7 +31,7 @@ function prepend-path {
 
 function system-cmd {
     param ($command)
-    cmd /c $command
+    cmd.exe /c $command
     if (-not ($?)) {
         throw "$($command) failed"
     }
