@@ -48,6 +48,9 @@ if ($env:WIN_RUBY_VERSION -eq "2.3") {
 } elseif ($env:WIN_RUBY_VERSION -eq "2.4") {
     write-host "Selected Ruby 2.4"
     conditional-package-prepend-path "ruby-2.4\bin"
+} elseif ($env:WIN_RUBY_VERSION -eq "2.5") {
+    write-host "Selected Ruby 2.5"
+    conditional-package-prepend-path "ruby-2.5\bin"
 } else {
     write-host "Defaulting to Ruby 2.4, set WIN_RUBY_VERSION env var to override"
     conditional-package-prepend-path "ruby-2.4\bin"
