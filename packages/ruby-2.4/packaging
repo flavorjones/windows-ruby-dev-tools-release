@@ -27,6 +27,7 @@ system-cmd "$($env:BOSH_INSTALL_TARGET)\bin\ruby.exe --version"
 #  * https://github.com/oneclick/rubyinstaller2/blob/master/lib/ruby_installer/build/msys2_installation.rb#L32-L65
 #
 $msys_install_dir = "$($env:BOSH_INSTALL_TARGET)\msys64"
+$msys_usr_bin_dir = "$($msys_install_dir)\usr\bin"
 
 new-item -itemtype directory -force -path $msys_install_dir
 
@@ -37,7 +38,7 @@ push-location "msys2"
 
 pop-location
 
-if (-not (test-path "$($env:BOSH_INSTALL_TARGET)\msys64\usr\bin\msys-2.0.dll")) {
+if (-not (test-path "$($msys_usr_bin_dir)\msys-2.0.dll")) {
     throw "msys2 didn't install properly"
 }
 
@@ -47,10 +48,26 @@ if (-not (test-path "$($env:BOSH_INSTALL_TARGET)\msys64\usr\bin\msys-2.0.dll")) 
 #
 conditional-package-prepend-path "ruby-2.4\bin"
 
-push-location "ruby-2.4"
+prepend-path $msys_usr_bin_dir
 
-    system-cmd "ridk exec bash.exe pacman-key --init"
-    system-cmd "ridk exec bash.exe pacman-key --populate msys2"
+push-location "ruby-2.4"
+    #
+    # initialize ... things. like gpg keys. and skeleton files.
+    #
+    # see https://github.com/oneclick/rubyinstaller2/issues/79 for background
+    system-cmd "bash.exe -lc 'true'"
+    system-cmd "bash.exe -lc 'pacman-key --init'"
+    system-cmd "bash.exe -lc 'pacman-key --populate msys2'"
+
+    #
+    # work around https://github.com/Alexpux/MSYS2-packages/issues/1024
+    #
+    system-cmd "pacman.exe --noconfirm --force -Syuu coreutils" # will fail the first time
+    system-cmd "pacman.exe --noconfirm --force -Syuu coreutils" # so run it again
+
+    #
+    # the important bits that we care about
+    #
     system-cmd "ridk install 2 3"
 
 pop-location
