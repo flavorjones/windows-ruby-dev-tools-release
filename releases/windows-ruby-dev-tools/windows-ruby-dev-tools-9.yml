@@ -1,0 +1,65 @@
+name: windows-ruby-dev-tools
+version: "9"
+commit_hash: a0aad5a
+uncommitted_changes: false
+jobs:
+- name: windows-ruby-dev-tools
+  version: eb2be84affa915153afff1593440477a20e2376b
+  fingerprint: eb2be84affa915153afff1593440477a20e2376b
+  sha1: 8c9c45816e2e0fbd978be2cefa5705d17e75dbf1
+packages:
+- name: git
+  version: dae2ab74edc132ba924998cea8021648e9f12cc4
+  fingerprint: dae2ab74edc132ba924998cea8021648e9f12cc4
+  sha1: e8ae5a6edd3f0f8afbe092b4005293a4fb1f0aa9
+  dependencies:
+  - windows-ruby-dev-tools
+- name: gpg
+  version: 4a3b716da18c3f02c0a24a1656f2de064d8276f2
+  fingerprint: 4a3b716da18c3f02c0a24a1656f2de064d8276f2
+  sha1: fe87455ab87c78a9e8a4f22fcdab4312c722d320
+  dependencies:
+  - windows-ruby-dev-tools
+  - unzip
+- name: patch
+  version: 57b75e00c244708a58d9bae9cae5d8a562d2c24f
+  fingerprint: 57b75e00c244708a58d9bae9cae5d8a562d2c24f
+  sha1: 279715212de5384141bf175dd04228b008b1a115
+  dependencies:
+  - windows-ruby-dev-tools
+  - unzip
+- name: ruby-2.3
+  version: 931412fa7d7f7b2ca4072768b95096e3b7a777de
+  fingerprint: 931412fa7d7f7b2ca4072768b95096e3b7a777de
+  sha1: cc266da85704fe3ae9bed72c959c0b3f2d408147
+  dependencies:
+  - windows-ruby-dev-tools
+- name: ruby-2.4
+  version: 5957db5a05f7e1f6b8f936c9e8d1f6665f53fe1b
+  fingerprint: 5957db5a05f7e1f6b8f936c9e8d1f6665f53fe1b
+  sha1: 6d18065f88ca02c1a8de23b7376ca085343544da
+  dependencies:
+  - windows-ruby-dev-tools
+  - unzip
+- name: ruby-2.5
+  version: 1f78d55578e41859372c254070df68d91d8540e7
+  fingerprint: 1f78d55578e41859372c254070df68d91d8540e7
+  sha1: 7a449a44757e563baab0e99d6a2ac204fa9ea659
+  dependencies:
+  - windows-ruby-dev-tools
+  - unzip
+- name: unzip
+  version: 02e6ae7b0044b3daaec49ae183e72feeac50d19a
+  fingerprint: 02e6ae7b0044b3daaec49ae183e72feeac50d19a
+  sha1: 649740e46f03d483356b268115360d29c3c412a1
+  dependencies:
+  - windows-ruby-dev-tools
+- name: windows-ruby-dev-tools
+  version: a16aaa3171eeac21402dff425e2849fbb10bc809
+  fingerprint: a16aaa3171eeac21402dff425e2849fbb10bc809
+  sha1: f9b9392107ea26662fd54ddfe5d99fdb7ee43c42
+  dependencies: []
+license:
+  version: 43ecfb465ebab99bcf0563d1976697227fe145d5
+  fingerprint: 43ecfb465ebab99bcf0563d1976697227fe145d5
+  sha1: 1d8b268722f24b721d76c6cdab3487d957376e1b
