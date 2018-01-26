@@ -1,5 +1,10 @@
 # windows-ruby-dev-tools-release changelog
 
+## unreleased
+
+Add ruby 2.5 support.
+
+
 ## v8 - 2018-01-06
 
 Fix msys2's packaging to address upstream package versioning issues.

@@ -1,0 +1,75 @@
+# -*-powershell-*-
+
+. "c:\var\vcap\packages\windows-ruby-dev-tools\prelude.ps1"
+
+#
+#  extract ruby
+#
+push-location "ruby-2.5"
+
+    system-cmd "rubyinstaller-2.5.0-1-x64.exe /verysilent /dir=$($env:BOSH_INSTALL_TARGET)"
+
+pop-location
+
+if (-not (test-path "$($env:BOSH_INSTALL_TARGET)\bin\ruby.exe")) {
+    throw "git didn't install properly"
+}
+
+system-cmd "$($env:BOSH_INSTALL_TARGET)\bin\ruby.exe --version"
+
+
+#
+#  install msys2
+#
+#  for details on why this works, see:
+#
+#  * https://github.com/oneclick/rubyinstaller2/issues/79#issuecomment-330079769
+#  * https://github.com/oneclick/rubyinstaller2/blob/master/lib/ruby_installer/build/msys2_installation.rb#L32-L65
+#
+$msys_install_dir = "$($env:BOSH_INSTALL_TARGET)\msys64"
+$msys_usr_bin_dir = "$($msys_install_dir)\usr\bin"
+
+new-item -itemtype directory -force -path $msys_install_dir
+
+push-location "msys2"
+
+    unzip.exe "msys2-base-x86_64-20161025.zip"
+    copy-item "msys64\*" -destination $msys_install_dir -recurse
+
+pop-location
+
+if (-not (test-path "$($msys_usr_bin_dir)\msys-2.0.dll")) {
+    throw "msys2 didn't install properly"
+}
+
+
+#
+#  update msys2
+#
+conditional-package-prepend-path "ruby-2.5\bin"
+
+prepend-path $msys_usr_bin_dir
+
+push-location "ruby-2.5"
+    #
+    # initialize ... things. like gpg keys. and skeleton files.
+    #
+    # see https://github.com/oneclick/rubyinstaller2/issues/79 for background
+    system-cmd "bash.exe -lc 'true'"
+    system-cmd "bash.exe -lc 'pacman-key --init'"
+    system-cmd "bash.exe -lc 'pacman-key --populate msys2'"
+
+    #
+    # work around https://github.com/Alexpux/MSYS2-packages/issues/1024
+    #
+    system-cmd "pacman.exe --noconfirm --force -Syuu coreutils" # will fail the first time
+    system-cmd "pacman.exe --noconfirm --force -Syuu coreutils" # so run it again
+
+    #
+    # the important bits that we care about
+    #
+    system-cmd "ridk install 2 3"
+
+pop-location
+
+system-cmd "$($env:BOSH_INSTALL_TARGET)\bin\ruby.exe -rdevkit -e 'puts 1234'"

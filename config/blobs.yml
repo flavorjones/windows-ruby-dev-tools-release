@@ -26,6 +26,9 @@ ruby-2.4/rubyinstaller-2.4.2-2-x64.exe:
   size: 8982267
   object_id: 0e833881-1c65-46e6-6b5c-60cf95cd8693
   sha: c961c2752a183487bc42ed24beb7e931230fa7d5
+ruby-2.5/rubyinstaller-2.5.0-1-x64.exe:
+  size: 9174503
+  sha: 5bb86a9b3c736598e7297609abdda539a54d14d8
 unzip-5.51-1/unzip.exe:
   size: 164864
   object_id: 38d4557f-1c64-4e99-69f8-163d3229c8b2

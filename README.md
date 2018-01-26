@@ -11,6 +11,7 @@ operating systems.
 
 ## Tools Installed
 
+- [Ruby 2.5 with optional DevKit](https://rubyinstaller.org/)
 - [Ruby 2.4 with optional DevKit](https://rubyinstaller.org/)
 - [Ruby 2.3 with optional DevKit](https://rubyinstaller.org/)
 - [unzip](http://gnuwin32.sourceforge.net/packages/unzip.htm)
@@ -22,8 +23,8 @@ operating systems.
 
 ## Tools Not Yet Installed (But I Plan To Do Soon)
 
-- More Rubies, with DevKit
 - CMake
+- msys2
 
 
 ## How do I use this?
@@ -49,6 +50,7 @@ By default, Ruby 2.4 will be in your search path as `ruby` or `ruby.exe`, as wil
 
 You can choose a different version of Ruby by setting `$env:WIN_RUBY_VERSION` to one of:
 
+* `2.5`
 * `2.4` (default)
 * `2.3`
 
@@ -58,6 +60,9 @@ You can opt into using DevKit by adding this line to your powershell script:
 $env:RUBYOPT = "-rdevkit"
 ```
 
+### Concourse support
+
+Check out https://github.com/flavorjones/concourse-gem if you'd like to integrate your concourse pipelines with the rubies in this release.
 
 
 ### Other executables
@@ -67,10 +72,19 @@ All the other executables are in your search path, so just go ahead and use `unz
 
 ## TODO
 
-- [x] ruby 2.4 with devkit (blocked on msys2 headless installation)
+High priority:
+
+- [x] ruby 2.5 with devkit
+- [x] ruby 2.4 with devkit
 - [x] ruby 2.3 with devkit 
 - [x] document how to choose a ruby
 - [x] document how to opt into devkit
+- [x] update concourse-gem with windows-awareness
+- [ ] install msys2 into a common directory (rather than into ruby directories)
+- [ ] cmake
+
+
+Lower priority:
+
 - [ ] ruby 2.2 with devkit
 - [ ] ruby 2.1 with devkit
-- [ ] update concourse-gem with windows-awareness
