@@ -61,9 +61,10 @@ push-location "ruby-2.4"
 
     #
     # work around https://github.com/Alexpux/MSYS2-packages/issues/1024
+    # and https://github.com/Alexpux/MSYS2-packages/issues/1141
     #
-    system-cmd "pacman.exe --noconfirm --force -Syuu coreutils" # will fail the first time
-    system-cmd "pacman.exe --noconfirm --force -Syuu coreutils" # so run it again
+    system-cmd "pacman.exe --noconfirm --ask 20 --force -Syuu coreutils" # will fail the first time
+    system-cmd "pacman.exe --noconfirm --ask 20 --force -Syuu coreutils" # so run it again
 
     #
     # the important bits that we care about
